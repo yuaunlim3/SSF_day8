@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div>
+        <header>
+            Person Registration
+        </header>
+        <main class="personInfo">
+            <form action="/register" method="POST" data-th-object="${person}">
+                <table>
+                    <tr>
+                        <td>
+                            Name:
+                        </td>
+                        <td>
+                            <input type="text" data-th-field="*{fullName}" placeholder="Enter your name">
+                            <span data-th-if="${#fields.hasErrors('fullName')}" data-th-errors="*{fullName}"
+                                class="error"></span>
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Email:
+                        </td>
+                        <td>
+                            <input type="text" data-th-field="*{email}" placeholder="Enter your email">
+                            <span data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}"
+                                class="error"></span>
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Postal Code:
+                        </td>
+                        <td>
+                            <input type="text" data-th-field="*{postalCode}" placeholder="Enter your postal code">
+                            <span data-th-if="${#fields.hasErrors('postalCode')}" data-th-errors="*{postalCode}"
+                                class="error"></span>
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Phone Number:
+                        </td>
+                        <td>
+                            <input type="text" data-th-field="*{phoneNumber}" placeholder="Enter your phone Number">
+                            <span data-th-if="${#fields.hasErrors('phoneNumber')}" data-th-errors="*{phoneNumber}"
+                                class="error"></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Register</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+    </div>
+    <br><br><br><br><b><br><br>
+        <div>
+            <header>
+                Get Carpark infos
+            </header>
+            <main class = "carpark">
+                <form action="/carpark" method="POST">
+                    <table>
+                        <tr>
+                            <td>
+                                <button type="submit">Get carpark info</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </main>
+        </div>
+</body>
+
+</html>

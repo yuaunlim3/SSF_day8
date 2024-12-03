@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>
+            List of people information
+        </h1>
+    </header>
+
+    <main>
+        <table border="2">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Full Name</td>
+                    <td>Email</td>
+                    <td>Phone Number</td>
+                    <td>Postal Code</td>
+                </tr>
+            </thead>
+            <tr data-th-each = "person :${personlist}">
+                <td data-th-text = "${person.id}"></td>
+                <td data-th-text = "${person.fullName}"></td>
+                <td data-th-text = "${person.email}"></td>
+                <td data-th-text = "${person.phoneNumber}"></td>
+                <td data-th-text = "${person.postalCode}"></td>
+            </tr>
+        </table>
+    </main>
+
+    <section>
+        <form action="/" method="POST">
+            <button type="submit">Back</button>
+        </form>
+    </section>
+</body>
+</html>

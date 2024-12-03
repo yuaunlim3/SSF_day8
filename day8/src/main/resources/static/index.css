@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+header {
+    background-color: yellow;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px black;
+}
+
+.personInfo {
+    background-color: lightgreen;
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 30%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px green;
+
+}
+
+.carpark {
+    background-color: lightblue;
+    width: 25%;
+    margin-top: 100px;
+    margin-left: 40%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px blue;
+
+}
